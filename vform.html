@@ -1,0 +1,39 @@
+<html>
+<head>
+<script type="text/javascript">
+function validationform()
+{
+var name=document.form1.name.value;
+var password=document.form1.password.value;
+var number=document.form1.number.value;
+if(name=="")
+{
+alert("Enter a valid name");
+
+}
+if(password.length<8||password="")
+{
+alert("enter a valid password");
+}
+if(number.length<10)
+{
+alert("enter a valid no");
+return false;
+}
+}
+</script>
+<body>
+<div style="border:5px solid black;background-color:brown;box-sizing:content-box;margin-left:400px;width:400px;height:400px;padding-left:50px">
+<body bgcolor="silver" align="center">
+<font color="green">
+<h2 align="center">VALIDATION FORM</h2>
+</font>
+<form name="form1" onsubmit="return validationform()">
+Name<input type="text" name="name" placeholder="enter name"required><br><br>
+Phone Number<input type="number" name="number" placeholder="enter mobile number"required><br><br>
+Email<input type="email" name="Email" placeholder="enter email"><br><br>
+Password<input type="password" name="password" placeholder="enter password"required><br><br>
+<input type="submit",value="">
+</form>
+</body>
+</html>
