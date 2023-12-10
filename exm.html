@@ -1,0 +1,109 @@
+<html>
+<head>
+<title>user registration</title>
+<style>
+.box{
+	 width: 70%;
+                    margin: 50px auto;
+                    padding: 20px;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    text-align: center;
+                    display:block;
+}
+#logform{
+	display:flex;
+	align-items:center;
+	flex-direction:column;
+	font-size:15px;
+	font-weight:bold;
+}
+.queform{
+	align-items:left;
+}
+input{
+	padding:5px 10px;
+	margin:10px;
+	text-align:center;
+}
+.section{
+	display:none;
+	text-align:left;
+}
+</style>
+</head>
+<body>
+<div class="box" id="header">
+<h1>Candidate Login</h1>
+<form name="logform" id="logform">
+<label>Reg:no</label>
+<input type="number" name="regno" placeholder="Enter your register number">
+<label>Password</label>
+<input type="password" name="pass" placeholder="Enter your password">
+</form>
+<button onclick="examVal()">SUBMIT</button>
+</div>
+
+<div class="box section" id="section">
+<h1>Questions</h1>
+<form name="queform" id="queform">
+<label>1.Who is the prime minster of india?</label>
+<br>
+<input type="radio" name="1" id="">Droupathi
+<input type="radio" name="1" id="">RahulGandhi
+<input type="radio" name="1" id="">Narendra Modhi
+<input type="radio" name="1" id="">Ramnath Govind
+<br>
+<label>2.How many colors are there in VIBGYOR?</label>
+<br>
+<input type="radio" name="2" id="">5
+<input type="radio" name="2" id="">6
+<input type="radio" name="2" id="">7
+<input type="radio" name="2" id="">8
+<br>
+<label>3.How many hours are there in a day?</label>
+<br>
+<input type="radio" name="3" id="">12 hours
+<input type="radio" name="3" id="">14 hours
+<input type="radio" name="3" id="">22 hours
+<input type="radio" name="3" id="">24 hours
+<br>
+<label>4.How many planets are there in solar system?</label>
+<br>
+<input type="radio" name="4" id="">5
+<input type="radio" name="4" id="">6
+<input type="radio" name="4" id="">7
+<input type="radio" name="4" id="">8
+<br>
+<label>Who is the CEO of apple?</label>
+<br>
+<input type="radio" name="5" id="">Tim Cook
+<input type="radio" name="5" id="">Sundar Pichai
+<input type="radio" name="5" id="">Mark Zuckerberg
+<input type="radio" name="5" id="">Elon Musk
+<br>
+</form>
+<button onclick="login()">SUBMIT</button>
+</div>
+
+<script>
+	function examVal() {
+			var regno=document.logform.regno.value;
+			var pass=document.logform.pass.value;
+console.log(regno);
+console.log(pass);
+			document.getElementById('header').style.display="none"
+			document.getElementById('section').style.display='block';
+		}
+	function login() {
+			var regno=document.logform.regno.value;
+			var pass=document.logform.pass.value;
+console.log(regno);
+console.log(pass);
+			alert("Registration "+regno+" congratulations you have successfully finished your exam")
+			document.getElementById('header').style.display="block"
+			document.getElementById('section').style.display='none';
+}
+</script>
+</body>
+</html>
